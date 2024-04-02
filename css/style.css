@@ -1,0 +1,174 @@
+html {
+    position: relative;
+    min-height: 100%;
+    padding-bottom:160px;
+  }
+  body {
+    margin-bottom: 160px;
+  }
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+  }
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    background-color: #333;
+    color: #fff;
+}
+
+.carousel-content {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    z-index: 20;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  }
+
+.navbar {
+    background-color: #222;
+    
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+}
+
+
+h1{
+    color: #ffcc00;
+    padding-top: 100px; 
+    margin-bottom: 50px;
+}
+h2,
+h3 {
+    color: #eec85f;
+    padding-top: 70px; 
+    margin-bottom: 50px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-label {
+    color: #fff;
+}
+
+.form-control {
+    background-color: #555;
+    color: #fff;
+}
+
+.form-check-input {
+    background-color: #555;
+}
+
+
+
+
+.btn-primary {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    color: #ffcc00;
+}
+
+
+.navbar-toggler-icon {
+    background-color: #03030300;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        background-color: #ffffff00;
+    }
+
+    .navbar-collapse {
+        background-color: #22222200;
+    }
+
+    .navbar-nav .nav-link {
+        color: #fff;
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #ffcc00;
+    }
+}
+
+.accordion .answer{
+    display:none;
+}
+.question{
+    background-color:#f7f7f7;
+    color:black;
+    padding:2%;
+}
+
+.accordion.active .answer{
+    display:block;
+    background-color:#f7f7f7;
+    color:black;
+    padding:2%;
+}
+
+.question::before {
+    content: '+ ';
+}
+
+.question:hover, 
+.accordion.active .question{
+    background-color:#bfbcbc;
+    cursor:pointer;
+}
+
+.accordion.active .question::before {
+    content: '- ';
+}
+
+
+a.button {
+    
+    display: inline-block;
+    
+    padding: 1em 3em;
+    
+    border-radius: 5px;
+    
+    text-decoration: none;
+    
+    color: white;
+    background-color: #4E9CAF;
+  }

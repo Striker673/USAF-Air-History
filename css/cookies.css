@@ -1,0 +1,20 @@
+/* Základné štýly pre popup súvisiaci s cookies */
+#cookies-popup {
+    display: none; /* Skrytie popupu na začiatku */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(241, 241, 241, 0.9); /* Priesvitné pozadie s farbou */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Tien pod popupom */
+}
+
+/* Tlačidlá v popup okne */
+#cookies-popup button {
+    margin: 5px; /* Okraj okolo tlačidiel */
+    padding: 10px; /* Vnútorný odstup tlačidiel */
+    cursor: pointer; /* Zmena kurzoru na ukazovanie, keď sa umiestnite na tlačidlo */
+}
+
