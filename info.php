@@ -32,16 +32,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Domov</a>
+                            <a class="nav-link" href="index.php">Domov</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="info.html">História</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="galeria.html">Galéria</a>
+                            <a class="nav-link" href="galeria.php">Galéria</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="kontakt.html">Kontakt</a>
+                            <a class="nav-link" href="kontakt.php">Kontakt</a>
                         </li>
                     </ul>
                 </div>
