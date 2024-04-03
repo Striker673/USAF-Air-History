@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
     <head>
         <meta charset="UTF-8">
@@ -7,7 +7,7 @@
         <meta name="description" content="Galéria amerických lietadiel">
         <meta name="keywords" content="Americké lietadlá, Druhá svetová vojna, Americká letecká história, galéria">
         <meta name="author" content="Andrej Šima">
-        <title>Kontakt</title>
+        <title>Kontakty</title>
 
       
         <link
