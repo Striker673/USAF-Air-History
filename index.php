@@ -22,32 +22,10 @@
 
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/Roundel_of_the_USAF.svg.png" alt="Your Logo" width="150" height="79" class="d-inline-block rounded-circle">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Domov</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="info.html">História</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="galeria.html">Galéria</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="kontakt.html">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <?php
+        include './components/header.php';
+        ?>
+    
 
         <!-- Slideshow -->
         <div id="aircraftSlideshow" class="carousel slide" data-bs-ride="carousel">
@@ -167,30 +145,15 @@
             </p>
         </div>
     </body>
+
 </html></div></section><h1 class="text-center">Často kladané otázky o Amerických lietadlách</h1><section class="container mb-5"><div class="accordion">
 <div class="question">Otázka 1: Sú Americké lietadlá drahé?</div>
 <div class="answer">Áno</div></div><div class="accordion">
 <div class="question">Otázka 2: Stoja za tú cenu?</div>
 <div class="answer">Bezpochybne áno</div></div><div class="accordion">
 <div class="question">Otázka 3: Sú nezničiteľné?</div>
-<div class="answer">Nie :(</div></div></section><div class="alert alert-warning alert-dismissible fade show position-fixed  bottom-0 start-50 translate-middle" role="alert">Táto stránka používa cookies.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div><footer class="bg-dark text-light py-3 "><div class="container">
-<div class="row">
-    <div class="col-md-6">
-        <p>&copy; 2023 Andrej Šima. Všetky práva vyhradené.</p>
-    </div>
-    <div class="col-md-6 text-md-end">
-      <p>Dizajnér stránky -
-        <i class="fas fa-heart text-danger"></i>
-        Andrej Šima</p>
-        <p>email:<i class="fa fa-envelope" aria-hidden="true">
-                <a href="mailto:andrej.sima@student.ukf.sk">
-                  andrej.sima@student.ukf.sk</a>
-            </i>
-        </p>
-        <p>mobilné číslo:<i class="fa fa-phone" aria-hidden="true">
-                <a href="tel:0939206021">
-                    0939206021</a>
-            </i>
-        </p>
-    </div>
+<div class="answer">Nie :</div></div></section><div class="alert alert-warning alert-dismissible fade show position-fixed  bottom-0 start-50 translate-middle" role="alert">Táto stránka používa cookies.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div><footer class="bg-dark text-light py-3 "><div class="container">
+
+<?php include './components/footer.php'?>
+
 </div></div></footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></body></html>
