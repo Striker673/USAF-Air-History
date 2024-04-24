@@ -9,11 +9,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item active">
-<<<<<<< HEAD
                     <a class="nav-link" href="index.php">Domov</a>
-=======
-                    <a class="nav-link" href="index.html">Domov</a>
->>>>>>> 8a2359196dcfb935ed407ab270f3b5bf1857fea5
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="info.php">História</a>

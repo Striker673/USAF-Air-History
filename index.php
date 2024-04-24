@@ -22,14 +22,10 @@
 
 
         <!-- Navigation -->
-<<<<<<< HEAD
         <?php
         include './components/header.php';
         ?>
     
-=======
-    <?php include "./components/header.php"?>
->>>>>>> 8a2359196dcfb935ed407ab270f3b5bf1857fea5
 
         <!-- Slideshow -->
         <div id="aircraftSlideshow" class="carousel slide" data-bs-ride="carousel">
