@@ -20,7 +20,6 @@ class Database {
             die("Chyba pripojenia: " . $e->getMessage());
         }
     }
-    // Getter na získanie pripojenia
     public function getConnection() {
         return $this->conn;
     }

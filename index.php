@@ -82,7 +82,6 @@
             </button>
         </div>
 
-        <!-- Main Content -->
         <div class="container mt-5 ">
           <h3>Vznik a história USAF</h3>
         <p>United States Air Force (USAF) vzniklo 18. septembra 1947, keď sa oddelilo od United States Army a stalo sa samostatnou vojenskou službou. Vznik USAF bol odpoveďou na rastúcu dôležitosť vzdušných operácií a potrebu nezávislej letectva. Jeho história siaha do obdobia Prvej svetovej vojny, keď letecké sily boli prvýkrát integrované do vojenských operácií.</p>
@@ -146,14 +145,7 @@
         </div>
     </body>
 
-</html></div></section><h1 class="text-center">Často kladané otázky o Amerických lietadlách</h1><section class="container mb-5"><div class="accordion">
-<div class="question">Otázka 1: Sú Americké lietadlá drahé?</div>
-<div class="answer">Áno</div></div><div class="accordion">
-<div class="question">Otázka 2: Stoja za tú cenu?</div>
-<div class="answer">Bezpochybne áno</div></div><div class="accordion">
-<div class="question">Otázka 3: Sú nezničiteľné?</div>
-<div class="answer">Nie :</div></div></section><div class="alert alert-warning alert-dismissible fade show position-fixed  bottom-0 start-50 translate-middle" role="alert">Táto stránka používa cookies.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div><footer class="bg-dark text-light py-3 "><div class="container">
-
-<?php include './components/footer.php'?>
+    <?php include './components/accordion.php'?>
+    <?php include './components/footer.php'?>
 
 </div></div></footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script></body></html>
