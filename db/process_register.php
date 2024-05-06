@@ -6,7 +6,6 @@ $password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    // Nastavenie režimu chybovania na výnimky
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     die("Connection failed: " . $e->getMessage());
@@ -27,12 +26,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Password must be at least 6 characters long");
     }
 
+    $sql = "SELECT * FROM users WHERE username = ?";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$username]);
+    $existingUser = $stmt->fetch();
+
+    if ($existingUser) {
+        die("Username already exists. Please choose a different username.");
+    }
+
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$username, $email, $hashedPassword]);
-
+    $insertSql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+    $insertStmt = $pdo->prepare($insertSql);
+    $insertStmt->execute([$username, $email, $hashedPassword]);
 
     header("Location: ../index.php");
     exit();
@@ -40,5 +47,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: ../signup.php");
     exit();
 }
-
 ?>
