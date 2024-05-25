@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'usaf';
+$dbname = 'usafone';
 $username = 'root';
 $password = '';
 
@@ -16,7 +16,7 @@ try {
         $stmt->bindParam(1, $imageData, PDO::PARAM_LOB);
         $stmt->execute();
 
-        header("Location: dat.php");
+        header("Location: galeria.php");
         exit();
     } else {
         echo "Error uploading file.";

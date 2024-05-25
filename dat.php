@@ -24,7 +24,7 @@
 
 <?php
 $host = 'localhost';
-$dbname = 'usaf';
+$dbname = 'usafone';
 $username = 'root';
 $password = '';
 try {

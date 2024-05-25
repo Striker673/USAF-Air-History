@@ -1,42 +1,25 @@
 <?php
 session_start();
 
-// Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: signin.php");
     exit();
 }
 
+require_once 'classes/User.php';
 
-$host = 'localhost';
-$dbname = 'usaf';
-$username = 'root';
-$password = '';
-
+$userID = $_SESSION['user_id'];
+$user = new User();
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $userData = $user->getUserById($userID);
 
-    $userID = $_SESSION['user_id'];
-
-    $sql = "SELECT * FROM users WHERE id = ?";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$userID]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    if (!$user) {
+    if (!$userData) {
         die("User not found.");
     }
-
-
-
-
-} catch (PDOException $e) {
-    die("Error: " . $e->getMessage());
+} catch (Exception $e) {
+    die($e->getMessage());
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -53,9 +36,9 @@ try {
 <?php include './components/header.php'; ?>
 
 <div class="container mt-5">
-    <h1>Welcome, <?php echo htmlspecialchars($user['username'] ?? ''); ?>!</h1>
+    <h1>Welcome, <?php echo htmlspecialchars($userData['username'] ?? ''); ?>!</h1>
     
-    <?php if (!empty($updateMessage)): ?>
+    <?php if (!empty($_GET['update']) && $_GET['update'] == 'success'): ?>
         <div class="alert alert-success" role="alert">
             Profile updated successfully!
         </div>
@@ -64,11 +47,11 @@ try {
     <form action="db/process_update_data.php" method="POST">
         <div class="mb-3">
             <label for="registerUsername" class="form-label">Change Username</label>
-            <input type="text" class="form-control" id="registerUsername" name="registerUsername" value="<?php echo htmlspecialchars($user['username'] ?? ''); ?>" required>
+            <input type="text" class="form-control" id="registerUsername" name="registerUsername" value="<?php echo htmlspecialchars($userData['username'] ?? ''); ?>" required>
         </div>
         <div class="mb-3">
             <label for="registerEmail" class="form-label">Change Email</label>
-            <input type="email" class="form-control" id="registerEmail" name="registerEmail" value="<?php echo htmlspecialchars($user['email'] ?? ''); ?>" required>
+            <input type="email" class="form-control" id="registerEmail" name="registerEmail" value="<?php echo htmlspecialchars($userData['email'] ?? ''); ?>" required>
         </div>
         <div class="mb-3">
             <label for="registerPassword" class="form-label">Change Password</label>

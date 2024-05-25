@@ -1,26 +1,31 @@
 <?php
-define('__ROOT__', dirname(dirname(__FILE__)));
-require_once(__ROOT__.'/db/config.php');
-class Database {
-    private $conn;
-    public function __construct() {
-        $this->connect();
-    }
-    protected function connect() {
-        $config = DATABASE;
-        $options = array(
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        );
+class Database
+{
+    private $host = 'localhost';
+    private $dbname = 'usafone';
+    private $username = 'root';
+    private $password = '';
+    private $pdo;
+
+    public function __construct()
+    {
         try {
-            $this->conn = new PDO('mysql:host=' . $config['HOST'] . ';dbname=' .
-                $config['DBNAME'] . ';port=' . $config['PORT'], $config['USER_NAME'],
-                $config['PASSWORD'], $options);
+            $this->pdo = new PDO("mysql:host=$this->host;dbname=$this->dbname", $this->username, $this->password);
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            die("Chyba pripojenia: " . $e->getMessage());
+            die("Connection failed: " . $e->getMessage());
         }
     }
-    public function getConnection() {
-        return $this->conn;
+
+    public function getPdo()
+    {
+        return $this->pdo;
+    }
+
+    public function fetchAirplaneImages()
+    {
+        $stmt = $this->pdo->query("SELECT image_src FROM airplanes");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
+?>

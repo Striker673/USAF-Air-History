@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'usaf';
+$dbname = 'usafone';
 $username = 'root';
 $password = '';
 
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST["loginUsername"]);
     $password = $_POST["loginPassword"];
     $keepLoggedIn = isset($_POST["keepLoggedIn"]); 
-    // Validate username
+    
     if (empty($username)) {
         die("Username is required");
     }
@@ -29,9 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start(); 
 
         $_SESSION['user_id'] = $user['id'];
-
-       
-       
 
         header("Location: ../index.php");
         exit();
