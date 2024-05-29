@@ -60,12 +60,12 @@ try {
         <button type="submit" class="btn btn-success">Update</button>
     </form>
 
-    <!-- "Log Out" Button -->
+    <!-- Log Out Button -->
     <form action="db/process_logout.php" method="post">
         <button type="submit" class="mt-3 btn btn-danger">Log Out</button>
     </form>
 
-    <!-- "Delete Account" Button -->
+    <!-- Delete Account Button -->
     <form action="db/process_delete.php" method="post" onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">
         <input type="hidden" name="deleteAccount" value="true">
         <button type="submit" class="mt-3 btn btn-danger">Delete Account</button>

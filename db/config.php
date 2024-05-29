@@ -1,7 +1,7 @@
 <?php
 define('DATABASE', [
     'HOST' => 'localhost',
-    'DBNAME' => 'usaf',
+    'DBNAME' => 'usafone',
     'PORT' => 3306,
     'USER_NAME' => 'root',
     'PASSWORD' => ''

@@ -28,7 +28,6 @@
     <div class="container">
         <div class="row">
             <?php
-            // Kód pre zobrazenie existujúcich obrázkov
             $host = 'localhost';
             $dbname = 'usafone';
             $username = 'root';
